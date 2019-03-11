@@ -15,10 +15,8 @@ const db = knex({
     client: 'pg',
     version: '7.2',
     connection: {
-      host : 'postgresql-fluffy-79872',
-      user : 'postgres',
-      password : 'falcon',
-      database : 'smartbrain'
+      host : process.env.DATABASE_URL,
+      ssl: true
     }
 });
 
