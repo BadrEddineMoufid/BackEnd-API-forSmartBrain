@@ -2,6 +2,9 @@
   "name": "BackEnd-API-forSmartBrain",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "10.3.0"
+  }
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js"
