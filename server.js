@@ -15,7 +15,7 @@ const db = knex({
     client: 'pg',
     version: '7.2',
     connection: {
-      host : '127.0.0.1',
+      host : 'postgresql-fluffy-79872',
       user : 'postgres',
       password : 'falcon',
       database : 'smartbrain'
@@ -31,7 +31,7 @@ app.use(cors());
 
 
 app.get('/', (req, res) => {
-    res.send('app is working');
+    res.send('if this shows up then then app is working hhhh');
 })
 
 app.post('/signin', (req, res) => {signin.handleSignin(req, res, db, bcrypt)})
@@ -50,5 +50,5 @@ app.post('/imageurl', (req, res) => { image.handleApiCall(req, res)})
 
 
 app.listen(process.env.PORT || 3000, ()=>{
-    console.log(`app is running on Port 3000! ${process.env.PORT}`);
+    console.log(`app is running on Port ${process.env.PORT}`);
 })
