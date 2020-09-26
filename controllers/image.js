@@ -11,7 +11,7 @@ const handleApiCall = (req, res) => {
   .then(data => {
         res.json(data);
     })
-    .catch(err => res.status(400).json('unable to work with API ' + err ))
+    .catch(err => {res.status(400).json('unable to work with API ' + err ), console.log(err)})
 }
 
 //incrementing entries in db
